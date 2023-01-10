@@ -1,0 +1,78 @@
+#!PYTHON
+
+import threading
+import getpass
+import openai
+import time
+import os
+
+class Waiter:
+    def __init__(self, string):
+        self.string     = string
+        self.is_runing  = True
+        self.thread     = threading.Thread(target=self.start_waiter, daemon=True)
+        self.thread.start()
+    
+    def stop(self):
+        self.is_runing  = False
+        self.thread.join()
+
+    def start_waiter(self):
+        i = 0
+        chars = "/-\\|"
+        while self.is_runing:
+            print(f"{self.string} [{chars[i]}]", end='\r', flush=True)
+            time.sleep(0.1)
+            i = (i + 1) % 4
+        print(f"{self.string} [✓]")
+
+w = Waiter("Initialising, please wait...")
+
+def clear_response(data):
+    curr = data
+    while 1:
+        curr = curr.replace("\n\n", "\n")
+        if curr == data:
+            break
+        data = curr
+    if curr[0] == '\n':
+        curr = curr[1:]
+    if curr[-1] == '\n':
+        curr = curr[:-1]
+    return curr
+
+def pprint(data):
+    for e in data:
+        print(e, end='', flush=True)
+        time.sleep(0.05)
+    print()
+
+with open(f"/home/{getpass.getuser()}/.cache/openai/TOKEN", 'r') as f:
+    TOKEN = f.read().split('\n')[0]
+
+openai.api_key = TOKEN
+
+w.stop()
+
+try:
+    while 1:
+        d = input(">> ")
+        w = Waiter("Processing, please wait...")
+        response = openai.Completion.create(
+            model="text-davinci-003",
+            prompt=d,
+            temperature=0,
+            max_tokens=64,
+            top_p=1.0,
+            frequency_penalty=0.0,
+            presence_penalty=0.0,
+            stop=["\"\"\""]
+        )
+        out = response["choices"][0]["text"]
+        out = clear_response(out)
+
+        w.stop()
+
+        pprint(out)
+except KeyboardInterrupt:
+    os.system("clear")
