@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$EUID" -e 0 ]; then
+if (( $EUID == 0 )); then
 	echo "Do not run as root !!!"
 	exit
 fi
@@ -13,8 +13,8 @@ mkdir /home/$USER/.cache/openai/
 
 mv TOKEN /home/$USER/.cache/openai/TOKEN
 
-mv chatgpt /usr/bin/chatgpt
-chmod +x /usr/bin/chatbot
+sudo mv chatgpt /usr/bin/chatgpt
+sudo chmod +x /usr/bin/chatbot
 
 echo "\"chatbot\" should now be available as a command"
 echo
