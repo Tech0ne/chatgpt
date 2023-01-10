@@ -14,7 +14,7 @@ mkdir /home/$USER/.cache/openai/
 cp TOKEN /home/$USER/.cache/openai/TOKEN
 
 sudo cp chatgpt /usr/bin/chatgpt
-sudo chmod +x /usr/bin/chatbot
+sudo chmod +x /usr/bin/chatgpt
 
 echo "\"chatbot\" should now be available as a command"
 echo
