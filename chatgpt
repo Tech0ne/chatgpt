@@ -56,7 +56,7 @@ w.stop()
 
 try:
     while 1:
-        d = input(">> ")
+        d = input("\n>> ")
         w = Waiter("Processing, please wait...")
         response = openai.Completion.create(
             model="text-davinci-003",
