@@ -11,9 +11,9 @@ pip3 install --upgrade openai
 mkdir /home/$USER/.cache/
 mkdir /home/$USER/.cache/openai/
 
-mv TOKEN /home/$USER/.cache/openai/TOKEN
+cp TOKEN /home/$USER/.cache/openai/TOKEN
 
-sudo mv chatgpt /usr/bin/chatgpt
+sudo cp chatgpt /usr/bin/chatgpt
 sudo chmod +x /usr/bin/chatbot
 
 echo "\"chatbot\" should now be available as a command"
