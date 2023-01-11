@@ -33,6 +33,8 @@ def do_zip_update():
     with open(sys.argv[0], 'w+') as f:
         f.write(r.text)
 
+pprint("U like dicks")
+
 w = Waiter("Updating, please wait...")
 
 fver = requests.get("https://raw.githubusercontent.com/Tech0ne/chatgpt/main/.version").text
