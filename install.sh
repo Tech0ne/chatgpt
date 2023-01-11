@@ -14,6 +14,7 @@ mkdir /home/$USER/.cache/openai/
 cp TOKEN /home/$USER/.cache/openai/TOKEN
 cp chatgpt /home/$USER/.cache/openai/chatgpt
 
+sudo rm /usr/bin/chatgpt
 sudo echo '#!/bin/bash' > /usr/bin/chatgpt
 sudo echo '' >> /usr/bin/chatgpt
 sudo echo $(which python3) /home/$USER/.cache/openai/chatgpt >> /usr/bin/chatgpt
