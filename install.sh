@@ -8,11 +8,11 @@ fi
 pip install --upgrade openai
 pip3 install --upgrade openai
 
-mkdir /home/$USER/.cache/
-mkdir /home/$USER/.cache/openai/
+mkdir $HOME/.cache/
+mkdir $HOME/.cache/openai/
 
-cp TOKEN /home/$USER/.cache/openai/TOKEN
-cp chatgpt /home/$USER/.cache/openai/chatgpt
+cp TOKEN $HOME/.cache/openai/TOKEN
+cp chatgpt $HOME/.cache/openai/chatgpt
 
 sudo rm /usr/bin/chatgpt
 sudo cp launcher /usr/bin/chatgpt
