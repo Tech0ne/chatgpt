@@ -14,7 +14,7 @@ mkdir $HOME/.cache/openai/
 cp TOKEN $HOME/.cache/openai/TOKEN
 cp chatgpt $HOME/.cache/openai/chatgpt
 
-sudo rm /usr/bin/chatgpt
+sudo rm -rf /usr/bin/chatgpt
 sudo cp launcher /usr/bin/chatgpt
 sudo chmod +x /usr/bin/chatgpt
 
