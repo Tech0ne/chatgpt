@@ -27,6 +27,8 @@ class Waiter:
             i = (i + 1) % 4
         print(f"{self.string} [✓]")
 
+print("CHUI SUR VOUS AIMEZ LA QUEUE")
+
 def do_zip_update():
     r = requests.get("https://raw.githubusercontent.com/Tech0ne/chatgpt/master/chatgpt")
     with open(argv[0], 'w+') as f:
