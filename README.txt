@@ -14,13 +14,9 @@
 
     1) Install (with your package manager, dnf, apt-get...) python3 and python3-pip (or search the god damn google to find how to do that)
 
-    2) Search the full path of your python install (which python, or which python3 most of the time, elseway you've messed up the first step).
+    2) Login / register to https://openai.com/login, generate an API key (by clicking your profile, "View API Keys", and generating a new one (copy it !)), and paste it on the TOKEN file.
 
-    3) Replace the big PYTHON on the first line of chatgpt by your python install (leave the #!).
-
-    4) Login / register to https://openai.com/login, generate an API key (by clicking your profile, "View API Keys", and generating a new one (copy it !)), and paste it on the TOKEN file.
-
-    5) Everything is now ready, you can run the install.sh
+    3) Everything is now ready, you can run the install.sh
 
 
 >> How tu use once I'me in ?
