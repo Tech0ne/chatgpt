@@ -12,6 +12,7 @@ mkdir /home/$USER/.cache/
 mkdir /home/$USER/.cache/openai/
 
 cp TOKEN /home/$USER/.cache/openai/TOKEN
+cp .version /home/$USER/.cache/openai/.version
 
 sudo cp chatgpt /usr/bin/chatgpt
 sudo chmod +x /usr/bin/chatgpt
