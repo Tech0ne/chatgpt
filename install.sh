@@ -15,6 +15,7 @@ cp TOKEN /home/$USER/.cache/openai/TOKEN
 
 sudo cp chatgpt /usr/bin/chatgpt
 sudo chmod +x /usr/bin/chatgpt
+sudo chmod +w /usr/bin/chatgpt
 
 echo "\"chatgpt\" should now be available as a command"
 echo
