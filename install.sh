@@ -17,6 +17,6 @@ cp .version /home/$USER/.cache/openai/.version
 sudo cp chatgpt /usr/bin/chatgpt
 sudo chmod +x /usr/bin/chatgpt
 
-echo "\"chatbot\" should now be available as a command"
+echo "\"chatgpt\" should now be available as a command"
 echo
 echo "You're welcome x)"

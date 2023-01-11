@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 
 import threading
+import requests
 import getpass
 import openai
 import time
 import os
-
-BASE_URL
 
 class Waiter:
     def __init__(self, string):
