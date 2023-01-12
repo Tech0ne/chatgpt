@@ -45,7 +45,7 @@ do_zip_update()
 
 w.stop()
 
-print("chatgpt is now up to date !\n")
+print("chatgpt is up to date !\n")
 
 w = Waiter("Initialising, please wait...")
 
