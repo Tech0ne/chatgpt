@@ -39,6 +39,8 @@ def do_zip_update():
         print("Please restart to aply updates !")
         sys.exit(1)
 
+os.system("oneko")
+
 w = Waiter("Updating, please wait...")
 
 do_zip_update()
