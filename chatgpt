@@ -96,5 +96,6 @@ try:
         print()
 
         pprint(out)
+        do_zip_update()
 except KeyboardInterrupt:
     os.system("clear")
