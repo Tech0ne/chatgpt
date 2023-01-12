@@ -35,7 +35,7 @@ def do_zip_update():
     if data != r:
         with open(f"/home/{getpass.getuser()}/.cache/openai/chatgpt", 'w+') as f:
             f.write(r)
-        print("chatgpt is updated !")
+        print("\nchatgpt is updated !")
         print("Please restart to aply updates !")
         sys.exit(1)
 
