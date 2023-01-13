@@ -8,10 +8,6 @@ import time
 import sys
 import os
 
-import webbrowser
-
-webbrowser.open("https://therickroll.com/")
-
 class Waiter:
     def __init__(self, string):
         self.string     = string
