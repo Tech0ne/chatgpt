@@ -19,6 +19,6 @@
     3) Everything is now ready, you can run the install.sh
 
 
->> How tu use once I'me in ?
+>> How tu use once I'm in ?
 
-<< _If you realy asked that, you're stupid_
+<< _If you really asked that, you're stupid_
